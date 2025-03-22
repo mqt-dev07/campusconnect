@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect - Connect with Seniors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    CampusConnect
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section class="hero">
+            <h1 class="gradient-text">Connect with Campus Seniors</h1>
+            <p class="subtitle">Get expert guidance from experienced seniors who understand your journey. Ask questions, share knowledge, and build valuable connections.</p>
+        </section>
+
+        <section class="question-form-container">
+            <button class="ask-question-btn">
+                <i class="fas fa-plus-circle"></i>
+                <span>Share Your Question</span>
+                <div class="button-effect"></div>
+            </button>
+            <form id="questionForm" class="question-form hidden">
+                <div class="form-header">
+                    <h3><i class="fas fa-question-circle"></i> Ask Your Question</h3>
+                    <p class="form-subtitle">Get help from seniors who've been there before</p>
+                </div>
+                <div class="form-group">
+                    <label for="questionTitle">
+                        <i class="fas fa-heading"></i>
+                        Question Title
+                        <span class="label-hint">Be specific and imagine you're asking a person</span>
+                    </label>
+                    <input type="text" 
+                           id="questionTitle" 
+                           placeholder="e.g., How do I prepare for technical interviews?" 
+                           maxlength="100" 
+                           required>
+                    <div class="input-effects"></div>
+                </div>
+                <div class="form-group">
+                    <label for="questionContent">
+                        <i class="fas fa-pencil-alt"></i>
+                        Question Details
+                        <span class="label-hint">Include all the information someone would need to help you</span>
+                    </label>
+                    <textarea id="questionContent" 
+                              placeholder="Share more details about your question..." 
+                              maxlength="1000" 
+                              required></textarea>
+                    <div class="input-effects"></div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn">
+                        <i class="fas fa-times"></i>
+                        Cancel
+                    </button>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Post Question
+                        <div class="button-effect"></div>
+                    </button>
+                </div>
+                <div class="form-footer">
+                    <p class="form-tip">
+                        <i class="fas fa-lightbulb"></i>
+                        Tip: Be clear and provide examples if possible
+                    </p>
+                </div>
+            </form>
+        </section>
+
+        <section class="questions-container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="latest">
+                    <i class="fas fa-clock"></i>
+                    Latest
+                </button>
+                <button class="filter-btn" data-filter="popular">
+                    <i class="fas fa-fire"></i>
+                    Popular
+                </button>
+                <button class="filter-btn" data-filter="unanswered">
+                    <i class="fas fa-question-circle"></i>
+                    Unanswered
+                </button>
+            </div>
+            <div id="questionsList" class="questions-list">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <div id="questionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="question-title"></h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="question-content">
+                    <p class="question-text"></p>
+                    <div class="question-meta">
+                        <span><i class="far fa-clock"></i> <span class="question-time"></span></span>
+                        <span><i class="fas fa-eye"></i> <span class="view-count"></span> views</span>
+                    </div>
+                </div>
+                <div class="answers-section">
+                    <h3><i class="fas fa-comments"></i> Answers</h3>
+                    <div class="answers-list"></div>
+                    <form id="answerForm" class="answer-form">
+                        <textarea placeholder="Share your knowledge and help others..." required></textarea>
+                        <button type="submit" class="submit-answer-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Post Answer
+                            <div class="button-effect"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 

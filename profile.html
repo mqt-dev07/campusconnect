@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect - Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    CampusConnect
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="profile.html" class="nav-link active">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <div class="profile-section">
+            <div class="profile-header">
+                <div class="profile-cover"></div>
+                <div class="profile-avatar-container">
+                    <img src="https://ui-avatars.com/api/?name=Muqeet&background=6366f1&color=fff&size=150" alt="Muqeet" class="profile-avatar">
+                    <button class="edit-avatar-btn">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <div class="profile-info">
+                    <h2 class="profile-name">Muqeet</h2>
+                    <p class="profile-email">muqeet@example.com</p>
+                    <div class="profile-badges">
+                        <span class="badge"><i class="fas fa-award"></i> Top Contributor</span>
+                        <span class="badge"><i class="fas fa-star"></i> Problem Solver</span>
+                        <span class="badge"><i class="fas fa-bolt"></i> Quick Responder</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Questions</h3>
+                    <p class="stat-number">5</p>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>12% this week</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-comment-dots"></i>
+                    <h3>Answers</h3>
+                    <p class="stat-number">12</p>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>8% this week</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Likes Received</h3>
+                    <p class="stat-number">45</p>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>15% this week</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Reputation</h3>
+                    <p class="stat-number">128</p>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>10% this week</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-activity">
+                <h3 class="section-title">Recent Activity</h3>
+                <div class="activity-timeline">
+                    <div class="activity-item">
+                        <div class="activity-icon question">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-text">Asked a question about React Hooks</p>
+                            <p class="activity-time">2 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon answer">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-text">Answered a question about JavaScript Promises</p>
+                            <p class="activity-time">5 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon achievement">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-text">Earned "Problem Solver" badge</p>
+                            <p class="activity-time">1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-achievements">
+                <h3 class="section-title">Achievements</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>First Answer</h4>
+                        <p>Posted your first answer</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h4>Curious Mind</h4>
+                        <p>Asked 5 questions</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Well Liked</h4>
+                        <p>Received 50 likes</p>
+                    </div>
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h4>Expert</h4>
+                        <p>Answer 100 questions</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 12%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <button class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 
